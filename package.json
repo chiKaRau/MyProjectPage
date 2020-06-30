@@ -1,0 +1,41 @@
+{
+  "homepage": "https://chikarau.github.io/MyProjectPage",
+  "name": "myprojectpage-dev3",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "main": "src/index.js",
+  "dependencies": {
+    "@types/jest": "25.2.2",
+    "@types/prop-types": "15.7.3",
+    "@types/react": "16.9.35",
+    "@types/react-dom": "16.9.8",
+    "@types/react-redux": "7.1.8",
+    "axios": "0.19.2",
+    "bootstrap": "4.5.0",
+    "csstype": "2.6.10",
+    "gh-pages": "2.2.0",
+    "jquery": "3.5.1",
+    "node-sass": "4.14.1",
+    "props-type": "1.0.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "react-redux": "7.2.0",
+    "react-scripts": "3.0.1",
+    "redux": "4.0.5",
+    "scss": "0.2.4",
+    "typescript": "3.8.3"
+  },
+  "devDependencies": {
+    "typescript": "3.8.3"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+}

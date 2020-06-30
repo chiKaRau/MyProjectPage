@@ -1,0 +1,310 @@
+html, body, #root, .App { height: 100%; }
+/**********************/
+/*        PARTS       */
+/**********************/
+
+body {
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("https://cdn5.f-cdn.com/contestentries/212081/10921447/5549c4471c049_thumb900.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: right bottom;
+  color: white;
+  opacity: 0.9;
+}
+
+#main {
+  margin-left: 0px; //160
+  margin-right: 0%;  //160
+  transition: 0.3s;
+}
+
+/**********************/
+/*     Components     */
+/**********************/
+
+//Header.js
+#header {
+  a {
+    color: white;
+    font-weight: bold;
+  }
+}
+
+//ProjecsList.js
+#projectsList {
+  .projectBox {
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    opacity: 0;
+
+    h5 {
+      word-wrap: break-word
+    }
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+
+  }
+}
+
+#errorMessage {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+//AdminSidebar.js
+#adminSidenav {
+  height: 100%;
+  width: 0px; //160
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.3s;
+
+  p {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+#ProjectForm {
+  input, textarea {
+    width: 70%;
+  }
+}
+
+//ProjectSidebar.js
+#projectSidenav {
+  height: 100%;
+  width: 0%; //160
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+  transition: 0.2s;
+
+  p {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    color:white;
+    display: block;
+  }
+
+  img {
+    width: 50%;
+    height: 50%;
+  }
+
+  #skills {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+  .closebtn {
+    &:hover, &:focus {
+      color: gray;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+}
+
+//searchProjectScreen.js
+/* The Modal (background) */
+#searchProjectScreen {
+  display: block; /* Hidden by default */
+  visibility: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid white;
+    outline: 0;
+    font-size: 1.3rem;
+    color: white;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+    &::placeholder {
+      color: white;
+    }
+  }
+}
+
+//showAllProjectsScreen.js
+/* The Modal (background) */
+#showAllProjectsScreen {
+  display: block; /* Hidden by default */
+  visibility: hidden;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  h3 {
+    opacity: 0.5;
+  }
+}
+
+//removeProjectPage.js
+/* The Modal (background) */
+#removeProjectPage {
+  display: block; /* Hidden by default */
+  position: absolute; /* Stay in place */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+//LoginPanel.js
+/* The Modal (background) */
+#loginPanel {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 10%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  /* Modal Content */
+.loginPanel-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    border: 1px solid #888;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  input {
+    width: 80%;
+  }
+
+  label {
+    color: #5cb85c;
+  }
+
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  .loginPanel-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+  }
+
+  .closebtn {
+    &:hover, &:focus {
+      color: #000;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+
+  .loginPanel-body {padding: 2px 16px;}
+}
+
+/* The Close Button */
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 3%;
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  &:hover, &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+hr {
+  border-top: 1px solid white;
+  width: 80%;
+}
+
+/**********************/
+/*      Animation     */
+/**********************/ 
+.floatingObj {
+  animation: float 6s linear infinite;
+}
+@keyframes float {
+	0% {
+		transform: translatex(0px);
+	}
+	50% {
+		transform: translatex(-5px);
+	}
+	100% {
+		transform: translatex(0px);
+	}
+}
+
+
+/*****************/
+/*     Other     */
+/*****************/
+
+/**********************/
+/*        Size        */
+/**********************/ 
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+  //LoginPanel.js
+  /* The Modal (background) */
+  #loginPanel {
+  /* Modal Content */
+  .loginPanel-content {
+      width: 80%;
+    }
+    input {
+      width: 100%;
+    }
+  }
+
+}
